@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg6fx7btgptg2"]
+
+[ext_resource type="Texture2D" uid="uid://b8vo5yuj1gyuy" path="res://The Boat/Rooms/Garage.webp" id="1_4t6ko"]
+[ext_resource type="Script" path="res://Garage.gd" id="1_o4yu8"]
+[ext_resource type="Texture2D" uid="uid://cjo8neu2vp8h6" path="res://The Boat/Items/Propeller.png" id="3_r845d"]
+[ext_resource type="PackedScene" uid="uid://crurv34f2iqub" path="res://player.tscn" id="4_7uuh2"]
+
+[node name="Garage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o4yu8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4t6ko")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 925.0
+offset_right = 1408.0
+offset_bottom = 1077.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Corridor_1" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+"
+
+[node name="Propeller" type="Sprite2D" parent="."]
+position = Vector2(1256, 797.375)
+scale = Vector2(0.323893, 0.337565)
+texture = ExtResource("3_r845d")
+
+[node name="player" parent="." instance=ExtResource("4_7uuh2")]
+up_direction = Vector2(0.707107, -0.707107)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Corridor_1" to="." method="_on_corridor_1_pressed"]

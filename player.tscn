@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://crurv34f2iqub"]
+
+[ext_resource type="PackedScene" uid="uid://j0jvsvaajo75" path="res://inventory/inv_ui.tscn" id="2_12ogo"]
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(1435, 613)
+
+[node name="Inv_UI" parent="." instance=ExtResource("2_12ogo")]

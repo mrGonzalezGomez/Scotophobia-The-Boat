@@ -1,0 +1,131 @@
+[gd_scene load_steps=4 format=3 uid="uid://cal64qkvgw3g8"]
+
+[ext_resource type="Script" path="res://Corridor_1.gd" id="1_ddlid"]
+[ext_resource type="Texture2D" uid="uid://nct7ljjg2muv" path="res://The Boat/Rooms/Corridor_1.webp" id="2_e76rw"]
+[ext_resource type="PackedScene" uid="uid://crurv34f2iqub" path="res://player.tscn" id="3_34oub"]
+
+[node name="Corridor_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ddlid")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e76rw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1453.0
+offset_top = 223.0
+offset_right = 1712.0
+offset_bottom = 875.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Bedroom" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 902.0
+offset_right = 1728.0
+offset_bottom = 1071.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Garage" type="Button" parent="MarginContainer2/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 366.0
+offset_right = 1229.0
+offset_bottom = 857.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="Corridor_2" type="Button" parent="MarginContainer3/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="player" parent="." instance=ExtResource("3_34oub")]
+up_direction = Vector2(0.707107, -0.707107)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Bedroom" to="." method="_on_bedroom_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Garage" to="." method="_on_garage_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Corridor_2" to="." method="_on_corridor_2_pressed"]

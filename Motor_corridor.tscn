@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2ajic7xexu4s"]
+
+[ext_resource type="Script" path="res://Motor_corridor.gd" id="1_0b2hv"]
+[ext_resource type="Texture2D" uid="uid://byv87u10lkq0h" path="res://The Boat/Motor/Motor_corridor.webp" id="2_0a2av"]
+[ext_resource type="PackedScene" uid="uid://crurv34f2iqub" path="res://player.tscn" id="3_i2vv1"]
+
+[node name="Motor_corridor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0b2hv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0a2av")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 263.0
+offset_right = 1299.0
+offset_bottom = 708.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Motor_stairs" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 798.0
+offset_right = 1669.0
+offset_bottom = 1081.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Corridor_2" type="Button" parent="MarginContainer2/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="player" parent="." instance=ExtResource("3_i2vv1")]
+up_direction = Vector2(0.707107, -0.707107)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Motor_stairs" to="." method="_on_motor_stairs_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Corridor_2" to="." method="_on_corridor_2_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bou642nkv7ir"]
+
+[ext_resource type="Texture2D" uid="uid://bqfs7r07xqgu1" path="res://The Boat/Asset/Item_slot.png" id="1_5jqbu"]
+[ext_resource type="Script" path="res://inventory/inv_ui_slot.gd" id="1_hm0bx"]
+
+[node name="inv_UI_slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(105, 97)
+offset_right = 105.0
+offset_bottom = 97.0
+script = ExtResource("1_hm0bx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.052, 0.0460653)
+texture = ExtResource("1_5jqbu")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(105, 96)
+layout_mode = 0
+offset_right = 105.0
+offset_bottom = 96.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]

@@ -1,0 +1,10 @@
+[
+	{"Name": "Ethan", "Text": "So what was the operation again?"},
+	{"Name": "Robin", "Text": "We need to go to the base and extract the materials in order to export it back to America"},
+	{"Name": "Ethan", "Text": "That's a very dangerous plan, do we have backup?"},
+	{"Name": "Robin", "Text": "Yes, Private [You] will cover us, any suggestions Private?"},
+	{"Name": "You", "Text": "No, just follow the orders given and this will be smooth like butter"},
+	{"Name": "Robin", "Text": "Good then we are ready for the day!"},
+	{"Name": "Ethan", "Text": "Wait was is that?"},
+	{"Name": "You", "Text": "That's a torp-"}
+]

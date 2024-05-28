@@ -1,0 +1,202 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfuowwfjacxxg"]
+
+[ext_resource type="Script" path="res://Corridor_2.gd" id="1_m273r"]
+[ext_resource type="Texture2D" uid="uid://da8fr3qx0jpyt" path="res://The Boat/Rooms/Corridor_2.webp" id="1_p6shh"]
+[ext_resource type="PackedScene" uid="uid://crurv34f2iqub" path="res://player.tscn" id="3_neobl"]
+
+[node name="Corridor_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m273r")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p6shh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 926.0
+offset_right = 1436.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Corridor_1" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 466.0
+offset_bottom = 1089.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Motor_corridor" type="Button" parent="MarginContainer2/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1450.0
+offset_right = 1919.0
+offset_bottom = 1077.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="Stairs_1" type="Button" parent="MarginContainer3/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="MarginContainer4" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 758.0
+offset_top = 339.0
+offset_right = 1167.0
+offset_bottom = 651.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer4"]
+layout_mode = 2
+
+[node name="Kitchen" type="Button" parent="MarginContainer4/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="player" parent="." instance=ExtResource("3_neobl")]
+up_direction = Vector2(0.707107, -0.707107)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Corridor_1" to="." method="_on_corridor_1_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Motor_corridor" to="." method="_on_motor_corridor_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Stairs_1" to="." method="_on_stairs_1_pressed"]
+[connection signal="pressed" from="MarginContainer4/VBoxContainer/Kitchen" to="." method="_on_kitchen_pressed"]

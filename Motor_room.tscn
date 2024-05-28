@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://5b7ugtqdh2js"]
+
+[ext_resource type="Script" path="res://Motor_room.gd" id="1_it6m1"]
+[ext_resource type="Texture2D" uid="uid://bew6o7tw0rl73" path="res://The Boat/Motor/Motor_room.webp" id="2_cy2wi"]
+[ext_resource type="Texture2D" uid="uid://dkomjy17kej4h" path="res://The Boat/Items/Crowbar.webp" id="3_mrce7"]
+[ext_resource type="Texture2D" uid="uid://bextep8227vc" path="res://The Boat/Items/Petrol can.png" id="4_3u8oc"]
+[ext_resource type="PackedScene" uid="uid://crurv34f2iqub" path="res://player.tscn" id="5_snaom"]
+
+[node name="Motor_room" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_it6m1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cy2wi")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 879.0
+offset_right = 1562.0
+offset_bottom = 1083.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Motor_stairs" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+"
+
+[node name="Crowbar" type="Sprite2D" parent="."]
+position = Vector2(434, 761)
+scale = Vector2(0.708984, 1.07024)
+texture = ExtResource("3_mrce7")
+
+[node name="PetrolCan" type="Sprite2D" parent="."]
+position = Vector2(1348, 689)
+scale = Vector2(0.411765, 0.320423)
+texture = ExtResource("4_3u8oc")
+
+[node name="player" parent="." instance=ExtResource("5_snaom")]
+up_direction = Vector2(0.707107, -0.707107)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Motor_stairs" to="." method="_on_motor_stairs_pressed"]

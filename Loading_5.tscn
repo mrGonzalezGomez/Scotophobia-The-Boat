@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvaaxm51chowh"]
+
+[ext_resource type="Texture2D" uid="uid://dmqdy8shm3v50" path="res://The Boat/Information/Loading.jpg" id="1_dt6dl"]
+[ext_resource type="Script" path="res://Loading_5.gd" id="1_sb2up"]
+[ext_resource type="FontFile" uid="uid://cc8rxekwapia4" path="res://ARMYD___.TTF" id="2_abh2o"]
+
+[sub_resource type="Theme" id="Theme_0awg6"]
+
+[node name="Loading_5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sb2up")
+
+[node name="Loading Image" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dt6dl")
+
+[node name="Lore text" type="Label" parent="Loading Image"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 42.0
+offset_right = 1921.0
+offset_bottom = 1017.0
+theme = SubResource("Theme_0awg6")
+theme_override_colors/font_color = Color(0.490196, 0.427451, 0.443137, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_abh2o")
+theme_override_font_sizes/font_size = 100
+text = "It has been 3 years since the attack at Pearl Harbor
+
+In 2 days we will reach Ford Island to do our next
+move
+
+I just hope that nothing happens in our way out
+
+Let's go outside to see what's going on"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1923.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Loading_hitbox" type="Button" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Loading_hitbox" to="." method="_on_loading_hitbox_pressed"]

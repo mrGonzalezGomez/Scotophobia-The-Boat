@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://bi770k2c54jah"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_w0hhw"]
+[ext_resource type="Texture2D" uid="uid://ds00p1mrdljve" path="res://The Boat/Items/Tool box.webp" id="2_lscwq"]
+
+[resource]
+script = ExtResource("1_w0hhw")
+name = "Toolbox"
+texture = ExtResource("2_lscwq")

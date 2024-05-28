@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqju4p88urspa"]
+
+[ext_resource type="Texture2D" uid="uid://blvccw6fwv4xd" path="res://The Boat/Rooms/Kitchen_1.webp" id="1_sk1y1"]
+[ext_resource type="PackedScene" uid="uid://crurv34f2iqub" path="res://player.tscn" id="2_in5vj"]
+
+[node name="Kitchen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sk1y1")
+
+[node name="player" parent="." instance=ExtResource("2_in5vj")]
+up_direction = Vector2(0.707107, -0.707107)
